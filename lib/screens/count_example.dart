@@ -44,10 +44,14 @@ class _CountExampleState extends State<CountExample> {
         );
       
         }),
+        // child: Text(countProvider.count.toString(),
+        // style: TextStyle(fontSize: 80,),
+        // ),
         ),
       floatingActionButton: FloatingActionButton(
       onPressed: (){
         countProvider.setCount();
+       
       },
       child: Icon(Icons.add),
       ),
