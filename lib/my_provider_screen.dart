@@ -13,19 +13,7 @@ class MyProviderScreen extends StatefulWidget {
 class _MyProviderScreenState extends State<MyProviderScreen> {
   int count = 0;
 
-  // @override
-  // void initState() {
-  //   // TODO: implement initState
-  //   super.initState();
-
-  //   Timer.periodic(Duration(seconds: 1), (timer) {
-  //     count++;
-  //     print(count);
-  //     setState(() {
-        
-  //     });
-  //   });
-  // }
+ 
 
   @override
   Widget build(BuildContext context) {

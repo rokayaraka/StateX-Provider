@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import 'package:provider_learning/my_provider_screen.dart';
+import 'package:provider_learning/provider/count_provider.dart';
+import 'package:provider_learning/screens/count_example.dart';
 
 
 void main() {
@@ -13,7 +16,9 @@ class MyApp extends StatelessWidget {
  
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+return ChangeNotifierProvider(
+  create: (_)=>CountProvider(),
+  child: MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         appBarTheme: AppBarTheme(
@@ -27,7 +32,10 @@ class MyApp extends StatelessWidget {
    
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home:  MyProviderScreen(),
-    );
-  }
+      home:  CountExample(),
+    ),
+  
+);
+
+ }
 }
