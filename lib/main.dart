@@ -1,0 +1,33 @@
+import 'package:flutter/material.dart';
+
+import 'package:provider_learning/my_provider_screen.dart';
+
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+ 
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.blue,
+          centerTitle: true,
+          titleTextStyle: TextStyle(
+            fontSize: 25,
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+   
+        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
+      ),
+      home:  MyProviderScreen(),
+    );
+  }
+}
