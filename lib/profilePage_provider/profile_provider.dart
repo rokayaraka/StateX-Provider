@@ -9,17 +9,13 @@ class ProfileProvider with ChangeNotifier{
   String get email=>_email;
   String get mobile=>_mobile;
 
-  void setName(){
+  void setInfo(){
     _name="Rifat Nur Shafin";
+    _email="Rifat@gmail.com";
+        _mobile="12345678";
     notifyListeners();
+
   }
 
-   void setEmail(){
-    _email="Rifat@gmail.com";
-    notifyListeners();
+
   }
-   void setMobile(){
-    _mobile="12345678";
-    notifyListeners();
-  }
-}

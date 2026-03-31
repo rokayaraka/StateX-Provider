@@ -24,6 +24,7 @@ return MultiProvider(
   providers: [
 ChangeNotifierProvider(  create: (_)=>CountProvider()),
 ChangeNotifierProvider(create: (_)=>ExampleOneProvider()),
+ChangeNotifierProvider(create: (_)=>ProfileProvider()),
 
   ],
 
@@ -41,7 +42,7 @@ ChangeNotifierProvider(create: (_)=>ExampleOneProvider()),
    
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home:  ExampleoneScreen(),
+      home:  ProfilePageScreen(),
     ),
   
 );
