@@ -15,7 +15,10 @@ class _ProfilePageScreenState extends State<ProfilePageScreen> {
   bool tapChange = false;
   @override
   Widget build(BuildContext context) {
-    final profileProvider = Provider.of<ProfileProvider>(context, listen: false);
+    final profileProvider = Provider.of<ProfileProvider>(
+      context,
+      listen: false,
+    );
     log('build');
     return Scaffold(
       appBar: AppBar(title: Text('Profile')),
@@ -57,7 +60,7 @@ class _ProfilePageScreenState extends State<ProfilePageScreen> {
                 );
               },
             ),
-            
+
             Consumer<ProfileProvider>(
               builder: (context, value, child) {
                 return TextButton(
@@ -67,7 +70,6 @@ class _ProfilePageScreenState extends State<ProfilePageScreen> {
                   ),
                   onPressed: () {
                     profileProvider.setInfo();
-                    
                   },
                   child: Text('Change'),
                 );
